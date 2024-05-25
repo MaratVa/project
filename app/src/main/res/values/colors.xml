@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Aqua">#00FFFF</color>
+    <color name="LightCyan">#E0FFFF</color>
+    <color name="PaleTurquoise">#AFEEEE</color>
+    <color name="Aquamarine">#7FFFD4</color>
+    <color name="Turquoise">#40E0D0</color>
+    <color name="MediumTurquoise">#48D1CC</color>
+    <color name="DarkTurquoise">#00CED1</color>
+    <color name="CadetBlue">#5F9EA0</color>
+    <color name="SteelBlue">#4682B4</color>
+    <color name="LightSteelBlue">#B0C4DE</color>
+    <color name="PowderBlue">#B0E0E6</color>
+    <color name="LightBlue">#ADD8E6</color>
+    <color name="SkyBlue">#87CEEB</color>
+    <color name="LightSkyBlue">#87CEFA</color>
+    <color name="DeepSkyBlue">#00BFFF</color>
+    <color name="DodgerBlue">#1E90FF</color>
+    <color name="CornflowerBlue">#6495ED</color>
+    <color name="MediumSlateBlue">#7B68EE</color>
+    <color name="RoyalBlue">#4169E1</color>
+    <color name="Blue">#0000FF</color>
+    <color name="MediumBlue">#0000CD</color>
+    <color name="DarkBlue">#00008B</color>
+    <color name="Navy">#000080</color>
+    <color name="MidnightBlue">#191970</color>
+</resources>
