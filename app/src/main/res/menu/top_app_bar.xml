@@ -3,17 +3,19 @@
 
     <item
         android:id="@+id/fav"
-        android:title="settings"
+        android:icon="@drawable/round_web_24"
+        android:title="web"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/search"
-        android:title="search"
+        android:icon="@drawable/round_games_24"
+        android:title="game"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/more"
-        android:title="More"
+        android:title="Settings"
         app:showAsAction="withText" />
 
 </menu>

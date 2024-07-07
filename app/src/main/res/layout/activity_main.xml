@@ -21,7 +21,9 @@
             android:layout_height="?attr/actionBarSize"
             app:title="Motorica"
             app:titleTextColor="@android:color/black"
-            app:menu="@menu/top_app_bar" />
+            app:menu="@menu/top_app_bar"
+            android:onClick="onClickToast"
+            app:navigationIcon="@drawable/baseline_format_list_bulleted_24"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -40,5 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Take a photo" />
+
+
 
 </LinearLayout>

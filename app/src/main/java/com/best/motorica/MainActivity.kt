@@ -4,7 +4,8 @@ import android.Manifest
 import android.content.ContentValues
 import android.content.Intent
 import android.net.Uri
-import android.os.Build
+import android.os.Build.VERSION
+import android.os.Build.VERSION_CODES
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
@@ -17,6 +18,7 @@ import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 
+
 class MainActivity : AppCompatActivity() {
 
     companion object {
@@ -28,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
     private var image_uri: Uri? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -38,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         //button click
         mCaptureBtn.setOnClickListener(View.OnClickListener {
             //Camera is clicked we need to check if we have permission of Camera, Storage before launching Camera to Capture image
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (VERSION.SDK_INT >= VERSION_CODES.TIRAMISU) {
                 //Device version is TIRAMISU or above. We only need Camera permission
                 val cameraPermissions = arrayOf(Manifest.permission.CAMERA)
                 requestCameraPermissions.launch(cameraPermissions)
@@ -69,7 +72,11 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     //Camera or Storage or Both permissions are denied, Can't launch camera to capture image
 
-                    Toast.makeText(this@MainActivity, "Camera or Storage or both permissions denied...", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this@MainActivity,
+                        "Camera or Storage or both permissions denied...",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         )
@@ -81,7 +88,8 @@ class MainActivity : AppCompatActivity() {
         contentValues.put(MediaStore.Images.Media.TITLE, "TEMPORARY_IMAGE")
         contentValues.put(MediaStore.Images.Media.DESCRIPTION, "TEMPORARY_IMAGE_DESCRIPTION")
         //Uri of the image to be captured from camera
-        image_uri = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
+        image_uri =
+            contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
         //Intent to launch camera
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         intent.putExtra(MediaStore.EXTRA_OUTPUT, image_uri)
@@ -101,4 +109,12 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "Cancelled...!", Toast.LENGTH_SHORT).show()
         }
     }
+
+
+
+    fun onClickToast(View: View) {
+        Toast.makeText(this, "Когда-нибудь здесь будет навигация...", Toast.LENGTH_SHORT).show()
+    }
+
+
 }
